@@ -46,15 +46,19 @@ const products = [
 function Features() {
   return (
     <section className="">
-      <h3 className="font-display pl-5 mt-16 font-semibold text-5xl">Featured Products</h3>
+      <h3 className="font-display pl-5 mt-16 font-semibold text-5xl">
+        Featured Products
+      </h3>
 
       {/* Filter tabs */}
-      <ul className="font-body pl-5 flex gap-4 mt-14 mb-7 font-medium">
+      <ul className="font-body pl-5 flex gap-4 mt-14 mb-7 font-medium overflow-x-auto whitespace-nowrap">
         <li className="bg-black border-1 px-4 py-1 rounded-2xl text-white cursor-pointer">
           All
         </li>
-        <li className=" 
-        border-1 px-4 py-1 rounded-2xl text-black cursor-pointer">
+        <li
+          className=" 
+        border-1 px-4 py-1 rounded-2xl text-black cursor-pointer"
+        >
           Shoe
         </li>
         <li className="border-1 px-4 py-1 rounded-2xl text-black cursor-pointer">
@@ -72,7 +76,7 @@ function Features() {
       </ul>
 
       {/* 3. Product grid */}
-      <div className="pl-5 grid grid-cols-4 gap-6 pr-5 cursor-pointer">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 px-3 md:px-5 cursor-pointer">
         {products.map((product) => (
           <div key={product.name}>
             <img
@@ -118,6 +122,7 @@ function Features() {
         </button>
       </div>
       {/*  */}
+
       <div
         className="relative min-h-[500px] flex items-start text-white pt-24 pl-0"
         style={{
@@ -127,14 +132,14 @@ function Features() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="pl-10">
-          <h2 className="font-display text-6xl mt-10">
-            Style and Coolness <br />
+        <div className="pl-6 md:pl-10 pr-6">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-6xl mt-10 leading-tight">
+            Style and Coolness <br className="hidden md:block" />
             in One Hand
           </h2>
-          <p className="mt-5 mb-5 text-sm">
-            Discover Hoodies That Are a Dazzling Fashion <br /> Statement,
-            Giving You Irreplaceable Style.
+          <p className="mt-5 mb-5 text-sm max-w-xs md:max-w-none">
+            Discover Hoodies That Are a Dazzling Fashion Statement, Giving You
+            Irreplaceable Style.
           </p>
           <button className="cursor-pointer text-black bg-white py-2 px-4 rounded-4xl font-bold">
             Shop Now

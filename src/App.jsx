@@ -8,11 +8,11 @@ function App() {
     return (
         <>
         <Navbar /> 
-            <Hero />
-            <Features />
-            <Categories />
-            <Footer/>
-            </>
+        <Hero />
+        <Features />
+        <Categories />
+        <Footer/>
+        </>
     );
 }
 export default App;

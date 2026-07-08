@@ -14,7 +14,7 @@ function Footer() {
         <p className="text-md font-semibold text-white/70">
           Style with the Best Hoodie in Your Hands
         </p>
-        <div className="flex items-center gap-4 mt-2 text-sm">
+        <div className="flex flex-wrap items-center justify-center gap-3 mt-2 text-sm">
           <button className="bg-white text-black rounded-full px-4 py-2 font-medium cursor-pointer">
             Our Instagram
           </button>
@@ -26,8 +26,8 @@ function Footer() {
 
       {/* Footer links panel - floats on top of the image, rounded top corners */}
       <div className="relative z-10 bg-white rounded-t-[2.5rem] mx-[20px] px-5 pt-14 pb-6">
-        <div className="grid grid-cols-4 gap-10 mb-14">
-          <div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 mb-14">
+          <div className="col-span-2 md:col-span-1">
             <p className="text-xl font-semibold lowercase mb-4">boodie.</p>
             <p className="text-sm text-neutral-500 max-w-xs mb-4">
               Loyal fan of the style featuring stylish hoodies, elegant plain
@@ -80,7 +80,7 @@ function Footer() {
 
         {/* Oversized wordmark */}
         <div className="overflow-hidden select-none">
-          <p className="font-display text-[7rem] md:text-[10rem] font-semibold leading-none text-neutral-100 tracking-tight -mb-6 md:-mb-10 text-center">
+          <p className="font-display text-[3.5rem] sm:text-[5rem] md:text-[10rem] font-semibold leading-none text-neutral-100 tracking-tight -mb-4 md:-mb-10 text-center">
             BOODIE
           </p>
         </div>

@@ -11,9 +11,11 @@ const categories = [
 function Categories() {
   return (
     <section className="px-5">
-      <h1 className="font-display mt-16 font-semibold text-5xl mb-10">Categories</h1>
+      <h1 className="font-display mt-16 font-semibold text-4xl md:text-5xl mb-10">
+        Categories
+      </h1>
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4">
         {categories.map((category) => (
           <div
             key={category.label}
