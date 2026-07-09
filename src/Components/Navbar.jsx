@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { ShoppingCart, Search, Heart, Menu, X } from "lucide-react";
 
-function Navbar() {
+function Navbar({ onAuthClick }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
   return (
     <header>
-      <nav className="bg-white shadow-sm flex items-center justify-between p-4 relative">
+      <nav className="bg-white shadow-sm flex items-center justify-between py-2 px-2 relative">
         <ul
           className={`items-center gap-4 cursor-pointer ${
             searchOpen ? "hidden md:flex" : "flex"
@@ -58,7 +58,10 @@ function Navbar() {
             className="w-6 h-6 hidden md:block cursor-pointer"
             strokeWidth={2}
           />
-          <button className="hidden md:inline-block rounded-2xl bg-black text-white py-[8px] px-5 cursor-pointer font-body">
+          <button
+            onClick={onAuthClick}
+            className="hidden md:inline-block rounded-2xl bg-black text-white py-[8px] px-5 cursor-pointer font-body"
+          >
             Login/Register
           </button>
 
@@ -85,19 +88,22 @@ function Navbar() {
               <ShoppingCart className="w-6 h-6" strokeWidth={2} />
               <span className="font-body">Cart</span>
             </div>
-            <button className="rounded-2xl bg-black text-white py-2 px-6 font-body">
+            <button
+              onClick={onAuthClick}
+              className="rounded-2xl bg-black text-white py-2 px-6 font-body"
+            >
               Login/Register
             </button>
           </div>
         )}
       </nav>
-
-      <div className="bg-black text-white flex justify-center p-2 text-center">
+      {/* it has its own component now */}
+      {/* <div className="bg-black text-white flex justify-center p-2 text-center">
         <p className="font-body text-sm">
           Instant Delivery is now available in jarkata area. Free shipping for
           standard delivery.
         </p>
-      </div>
+      </div> */}
     </header>
   );
 }

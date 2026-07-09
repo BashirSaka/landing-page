@@ -51,7 +51,7 @@ function Features() {
       </h3>
 
       {/* Filter tabs */}
-      <ul className="font-body pl-5 flex gap-4 mt-14 mb-7 font-medium overflow-x-auto whitespace-nowrap">
+      <ul className="font-body pl-5 flex gap-4 mt-14 mb-7 font-medium overflow-x-auto whitespace-nowrap scrollbar-hide">
         <li className="bg-black border-1 px-4 py-1 rounded-2xl text-white cursor-pointer">
           All
         </li>
